@@ -1,113 +1,64 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useParams, useNavigate } from 'react-router-dom';
 import { API_BASE_URL } from '../../env';
 import ImageUpload from './ImageUpload';
-import NotFound from '../../pages/NotFound';
 import './addpr.css';
 
-export default function EditProduct() {
-//   const navigate = useNavigate(); // Access navigate object for redirection
-  const [productId, setProductId] = useState(null);
-  const [authToken, setAuthToken] = useState('');
-  const [isOwner, setIsOwner] = useState(false);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const token = localStorage.getItem('authToken');
-    setAuthToken(token);
-
-//     const checkOwnership = async () => {
-//       try {
-//         const response = await axios.get(
-//           `${API_BASE_URL}/user/products/checkOwnership/${productId}`,
-//           {
-//             headers: {
-//               Authorization: `Bearer ${token}`,
-//             },
-//           }
-//         );
-
-//         setIsOwner(response.data.owner);
-//         setLoading(false);
-//       } catch (error) {
-//         console.error('Error checking ownership:', error);
-//         window.location.href = '/not-found';
-//         setLoading(false);
-//       }
-//     };
-
-//     checkOwnership();
-  }, []);
-
+export default function AddProduct() {
   const [productData, setProductData] = useState({
     product_name: '',
     category: '',
     price: '',
     description: '',
   });
+  const [filesToUpload, setFilesToUpload] = useState([]);
+  const [authToken, setAuthToken] = useState(localStorage.getItem('authToken'));
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setProductData({
-      ...productData,
-      [name]: value,
-    });
+    setProductData({ ...productData, [name]: value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    // Form validation
     for (const key in productData) {
       if (productData.hasOwnProperty(key) && productData[key] === '') {
         alert(`Please fill in the ${key.replace('_', ' ')}`);
         return;
       }
     }
+
     try {
-      // Create a new empty product
       const response = await axios.post(`${API_BASE_URL}/user/products/emptyHost`, {}, {
-        headers: {
-          Authorization: `Bearer ${authToken}`,
-        },
+        headers: { Authorization: `Bearer ${authToken}` },
       });
-      
-      // Set the productId based on the response
-      setProductId(response.data.product.id);
-  
-      // Log the productId to the console
-      console.log(response.data.product.id);
-  
-      // Check if any required fields are empty
-  
-      // Update the product with the provided data
-      const updateResponse = await axios.put(
-        `${API_BASE_URL}/user/products/create/${productId}`,
-        productData,
-        {
+
+      const newProductId = response.data.product.id;
+
+      for (const file of filesToUpload) {
+        const formData = new FormData();
+        formData.append('image', file);
+
+        await axios.post(`${API_BASE_URL}/upload/${newProductId}`, formData, {
           headers: {
+            'Content-Type': 'multipart/form-data',
             Authorization: `Bearer ${authToken}`,
           },
-        }
-      );
-  
-      // Clear the form data
-      setProductData({
-        product_name: '',
-        category: '',
-        price: '',
-        description: '',
+        });
+      }
+
+      await axios.put(`${API_BASE_URL}/user/products/create/${newProductId}`, productData, {
+        headers: { Authorization: `Bearer ${authToken}` },
       });
-  
-      // Redirect to the desired page
+
+      // Resetting form and redirecting
+      setProductData({ product_name: '', category: '', price: '', description: '' });
       window.location.href = '/kiuHost';
-  
     } catch (error) {
-      console.error('Error creating or updating product:', error);
-      // Handle errors or display error messages to the user
+      console.error('Error:', error);
     }
   };
-  
 
   // const deleteProduct = async () => {
   //   try {
@@ -173,7 +124,7 @@ export default function EditProduct() {
     <div className='addproduct_main_ctn'>
       <h1>ADD PRODUCT</h1>
       <div className='addproduct_cont'>
-        <ImageUpload />
+      <ImageUpload setFilesToUpload={setFilesToUpload} />
         <div className='ctn'>
           <form onSubmit={handleSubmit}>
             <label>
