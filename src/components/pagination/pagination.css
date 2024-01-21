@@ -1,0 +1,41 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    all: unset;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-family: "Proxima Nova";
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 27px;
+    font-style: normal;
+    text-align: center;
+    color: #1b2d55;
+    opacity: 0.40;
+  }
+  
+  .pagination button:disabled {
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    letter-spacing: 10px;
+    color: #9aa2b4;
+    cursor: not-allowed;
+  }
+  
+  .pagination button.active {
+    opacity: 1;
+    font-family: "Proxima Nova";
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 27px;
+    font-style: normal;
+    text-align: center;
+    letter-spacing: 10px;
+    color: #1b2d55;
+  }
+  

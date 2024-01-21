@@ -1,0 +1,223 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+.addproduct_main_ctn{
+  border-radius: 27px;
+  padding: 30px;
+  width: 90%;
+  margin: auto;
+
+  background: #e6e6e6
+}
+.addproduct_main_ctn h1{
+  font-family: "Source Serif Pro";
+  font-size: 50px;
+  font-weight: 900;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  color: #051231;
+}
+.addproduct_cont{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  gap: 100px;
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 29px;
+}
+.ctn{
+  width: 50%;
+  background: #fff;
+  border:  2px solid #707070;
+  border-radius: 17px;
+  padding: 30px;
+}
+::selection{
+  color: #fff;
+  background: #6990F2;
+}
+.wrapper{
+  background: #fff;
+  border:  2px solid #707070;
+  border-radius: 17px;
+  padding: 30px;
+}
+.wrapper header{
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 27px;
+  font-style: normal;
+  text-align: left;
+  color: #cfcfcf;
+}
+.wrapper form{
+  height: 167px;
+  display: flex;
+  cursor: pointer;
+  margin: 10px 0px 30px 0px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-color: #707070;
+  border-width: 1px;
+  border-style: dashed;
+  border-radius: 17px;
+
+
+background: #f7f7f7
+}
+form :where(i, p){
+  color: #6990F2;
+}
+form i{
+  font-size: 50px;
+}
+form p{
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+section .row{
+  margin-bottom: 10px;
+  background: #fff;
+  border:2px solid #707070;
+  list-style: none;
+  padding: 15px 20px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section .row i{
+  color: #6990F2;
+  font-size: 30px;
+}
+section .details span{
+  font-size: 14px;
+}
+.progress-area .row .content{
+  width: 100%;
+  margin-left: 15px;
+}
+.progress-area .details{
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+  justify-content: space-between;
+}
+.progress-area .content .progress-bar{
+  height: 6px;
+  width: 100%;
+  margin-bottom: 4px;
+  background: #fff;
+  border-radius: 30px;
+}
+.content .progress-bar .progress{
+  height: 100%;
+  width: 0%;
+  background: #6990F2;
+  border-radius: inherit;
+}
+.uploaded-area{
+  max-height: 232px;
+  overflow-y: scroll;
+}
+.uploaded-area.onprogress{
+  max-height: 150px;
+}
+.uploaded-area::-webkit-scrollbar{
+  width: 0px;
+}
+.uploaded-area .row .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.content div{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.uploaded-area .row .details{
+  display: flex;
+  margin-left: 15px;
+  flex-direction: column;
+}
+.uploaded-area .row .details .size{
+  color: #404040;
+  font-size: 11px;
+}
+.uploaded-area i.fa-check{
+  font-size: 16px;
+}
+
+form label{
+  font-family: "Montserrat";
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 27px;
+  font-style: normal;
+  text-align: left;
+  color: #24396e;
+}
+.linput{
+  border-color: #707070 !important ;
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-radius: 25px !important;
+  width: 100% !important;
+  height: 40px !important;
+  
+  
+  background: #ffffff!important;
+}
+.binput{
+  height: 118px !important;
+  border-color: #707070 !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-radius: 25px !important;
+  width: 100% !important;
+  padding: 15px;
+  
+  
+  background: #ffffff !important
+}
+
+
+@media screen and (max-width: 768px) {
+  .addproduct_main_ctn{
+    width: 100%;
+    background-color: #fff;
+  }
+  .addproduct_main_ctn h1{
+    display: none;
+  }
+  .addproduct_cont {
+    flex-direction: column;
+    border:  2px solid #707070;
+    gap: 20px;
+    width: 90%;
+  }
+  .addproduct_cont > .ctn {
+    border: none;
+    width: 100%;
+    padding: 0;
+    }
+  /* You can add more specific styles here for smaller screens if needed */
+}

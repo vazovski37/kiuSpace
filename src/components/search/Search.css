@@ -1,0 +1,112 @@
+/* Search.css */
+
+/* Common styles for search button and search bar input */
+.searchButton {
+    all: unset;
+    background-color: #7CBAD2;
+    padding: 9px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .searchBar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-bottom: 20px; /* Add margin for separation */
+  }
+  
+  .searchBar input {
+    width: 300px; /* Adjusted for responsiveness */
+    border: none;
+    border-bottom: 2px solid #707070;
+    color: #1B2D55;
+    border-radius: 0;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+  
+  .searchBar input:focus {
+    outline: none;
+    border-bottom: 2px solid #707070;
+    color: #1B2D55;
+    border-radius: 0;
+  }
+  
+  /* Additional styles for section buttons */
+  .searchR {
+    width: 300px; /* Adjusted for responsiveness */
+    display: flex;
+    flex-direction: column;
+    background-color: #bcbcbc;
+    position: absolute;
+    z-index: 999;
+  }
+  
+  .sectionButtonsContainer {
+    display: flex;
+    width: 100%; /* Adjusted for responsiveness */
+    justify-content: space-around;
+  }
+  
+  .sectionButtonsContainer button {
+    all: unset;
+    border-bottom: 2px solid transparent; /* Initially hide bottom border for all buttons */
+    cursor: pointer;
+  }
+  
+  .sectionButtonsContainer button.selected {
+    border-bottom: 2px solid #7CBAD2; /* Add bottom border to the selected button */
+  }
+
+  /* Media query for smaller screens (phones) */
+/* Search.css */
+
+/* Common styles for search button and search bar input */
+/* ... your existing styles */
+
+/* Media query for smaller screens (phones) */
+@media screen and (max-width: 768px) {
+    .searchButton {
+      /* Hide search input by default on smaller screens */
+      display: block;
+    }
+  
+    .searchBar {
+      /* Hide search bar and show only the search button */
+      display: flex;
+      justify-content: center;
+    }
+  
+    .searchBar input {
+      display: none; /* Hide input on smaller screens */
+    }
+  
+    .searchR {
+      /* Show search results on full screen when the input or search button is clicked */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #bcbcbc;
+      z-index: 999;
+      overflow-y: auto;
+    }
+  
+    /* Additional styles for section buttons on smaller screens */
+    .sectionButtonsContainer {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .sectionButtonsContainer button {
+      width: 80%;
+      margin: 10px 0;
+      text-align: center;
+    }
+  }
+  
+  

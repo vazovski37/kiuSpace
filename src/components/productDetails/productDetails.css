@@ -1,0 +1,114 @@
+.product-details{
+    display: flex;
+    flex-direction: row;
+    gap: 106px;
+}
+
+h2{
+    all: unset;
+}
+
+p{
+    margin-left: 0;
+}
+
+.grey-bg{
+    padding: 36px;
+    border-bottom-right-radius: 85px;
+    border-top-right-radius: 85px;
+
+    background-color: #E6E6E6;
+    margin-left:-20px;
+}
+
+.main-image-container{
+    width: 458px;
+    height: 586px;
+    
+
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-radius: 85px;
+    overflow: hidden;
+}
+.main-image-container img{
+    height: 100%;
+    border-radius: 44px;
+
+}
+.thumbnails-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+
+}
+.thumbnails-container-img{
+    width: 122px;
+    height: 184px;
+    cursor: pointer;
+    border-color: #1b2d55;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 48px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+.thumbnails-container-img img{
+    height: 100%;
+}
+
+.info{
+    margin-top: 30px;
+}
+.user-info{
+
+}
+.user-nickname{
+    font-family: "Montserrat";
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 27px;
+    font-style: normal;
+    text-align: left;
+    color: #323a4d;
+}
+.user-mail{
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 27px;
+    font-style: normal;
+    text-align: left;
+    color: #cfcfcf;
+}
+.product-name{
+    font-family: "Source Serif Pro";
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 50px;
+    font-style: normal;
+    text-align: left;
+    color: #1b2d55;
+}
+.product-data-type{
+    font-family: "Montserrat";
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 27px;
+    font-style: normal;
+    text-align: left;
+    color: #cfcfcf
+}
+
+.product-data{
+    font-family: "Montserrat";
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 27px;
+    font-style: normal;
+    text-align: left;
+    color: #5c5c5c;
+}

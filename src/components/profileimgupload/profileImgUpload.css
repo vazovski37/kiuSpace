@@ -1,0 +1,59 @@
+/* Main container */
+.profile-upload-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+  }
+  
+  /* Image styles */
+  .profile-image {
+    width: 170px;
+    height: 170px;
+    border-radius: 85px;
+  }
+  .uploader-button{
+    cursor: pointer;
+    padding: 15px 33px;
+    border-color: #d1d1d1;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 20px;
+    
+    
+    background: #fdfdfd
+  }
+  .upload-input {
+    display: none;
+  }
+  
+  /* Button styles */
+  .upload-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: center;
+    row-gap: 19px;
+    margin-left: 43px;
+  }
+  
+  .upload-info {
+    margin: 0;
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 27px;
+    font-style: normal;
+    text-align: left;
+    letter-spacing: 1px;
+    color: #1b2d55;
+    border-color: #000000;
+    border-width: 1px;
+    border-style: dashed;
+    width: 400px;
+    
+    border-radius: 20px;
+    background: #fdfdfd;
+  }
+  

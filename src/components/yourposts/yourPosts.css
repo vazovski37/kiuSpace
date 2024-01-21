@@ -1,0 +1,27 @@
+/* YourPosts.css */
+/* Styling for the product cards */
+.product-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+  }
+  
+  .product-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .product-details {
+    margin-left: 10px;
+  }
+  
+  .product-description {
+    font-size: 14px;
+  }
+  
+  .product-price {
+    font-weight: bold;
+  }
+  

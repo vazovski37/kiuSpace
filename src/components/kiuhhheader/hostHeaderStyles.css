@@ -1,0 +1,168 @@
+/* Common styles for both desktop and mobile
+.header-container.host-style {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:#fff;
+    display: flex;
+  }
+  
+  .left-box.host-style {
+    width: 22.5%;
+    height: 396px;
+    background: #7cbad2;
+  }
+  
+  .right-box.host-style {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 38.3%;
+    height: 396px;
+    background: #7cbad2;
+    z-index: 5;
+  }
+  .box.host-style{
+    position: absolute;
+    top: 43px;
+    right: 0;
+    width: 50%;
+    height: 488px;
+  }
+  .image.host-style {
+    position: absolute;
+    width: auto;
+    bottom: 23px;
+    max-height: 465px;
+    z-index: 6;
+  }
+  .bottom-box.host-style{
+    position: absolute;
+    width: 100%;
+    height: 132px;
+    z-index: 4;
+    bottom:0px;    
+    
+    background: #fee1e1
+  }
+  .text-box.host-style{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: left;
+    background-color: #fff;
+    height: 100%;
+    width: 57.2%;
+    margin-left: 64px;
+    top: 0;
+    z-index: 3;
+  }
+  .text-box.host-style h1{
+    margin: 0;
+    width: 500px;
+height: 168px;
+    font-family: "Source Serif Pro";
+    font-size: 50px;
+    font-weight: 900;
+    font-style: normal;
+    text-align: left;
+    color: #1b2d55;
+    z-index: 999;
+  }
+  .text-box.host-style p{
+    font-family: "Montserrat";
+    margin: 0;
+    margin-right: 170px;
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 27px;
+    font-style: normal;
+    text-align: left;
+    color: #5c5c5c;
+  }
+  .text-box.host-style a{
+    text-decoration: none;
+    margin-top: 35px;
+  }
+  .text-box.host-style button{
+    all: unset;
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    color: #ffffff;
+
+    padding: 23px 25px;
+    border-radius: 29px;
+    background: #7cbad2
+  }
+   */
+
+   .kiu-ecosystem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vw; /* Adjust padding as a percentage of the viewport width */
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+    color: #333;
+    max-width: 100vw; /* Ensure the component does not exceed the width of the viewport */
+    overflow: hidden; /* Prevent any child elements from causing horizontal scroll */
+  }
+  
+  .content-container {
+    max-width: 40%; /* Adjust content width as a percentage of the parent container */
+  }
+  
+  .header {
+    font-size: 1.5vw; /* Scale the font size based on the viewport width */
+  }
+  
+  .description {
+    font-size: 1vw;
+  }
+  
+  .add-product-button {
+    padding: 1vw 2vw; /* Use viewport units for padding to keep it proportional */
+    font-size: 1vw;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .illustration-container {
+    /* Adjust the size of the illustration container, if you have images or SVGs here */
+  }
+  
+  /* Responsive design for mobile devices */
+  @media (max-width: 768px) {
+    .kiu-ecosystem {
+      flex-direction: column;
+      padding: 10% 5%; /* Increase padding proportionally */
+    }
+    
+    .content-container,
+    .illustration-container {
+      max-width: 100%; /* Allow content to take full width on small screens */
+    }
+    
+    .header {
+      font-size: 4vw; /* Increase font size for readability on small screens */
+    }
+    
+    .description {
+      font-size: 3vw;
+    }
+    
+    .add-product-button {
+      padding: 3vw 6vw;
+      font-size: 3.5vw;
+    }
+  }
+  

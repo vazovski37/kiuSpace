@@ -1,0 +1,19 @@
+.home-header-text{
+    font-family: "Source Serif Pro";
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 76px;
+    font-style: normal;
+    text-align: center;
+    color: #1b2d55;
+    margin-bottom: 20px;
+}
+.home-header-underline{
+    width: 428.2px;
+    height: 0px;
+    margin: 0 auto;    
+    border-color: #707070;
+    border-width: 1px;
+    border-style: solid;
+    margin-bottom: 42px;
+}

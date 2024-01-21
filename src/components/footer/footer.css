@@ -1,0 +1,73 @@
+.footer-div {
+    margin-top: 120px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .footer-left-div {
+    position: relative;
+    width: 42%;
+    background: #7cbad2;
+    height: 588px;
+    display: flex; /* Added */
+    align-items: center; /* Center vertically */
+  }
+  
+  .footer-left-div .footer-left-content {
+    max-width: 443px;
+    text-align: start;
+    margin-left: auto; /* Move to the right by 100px */
+    padding-right: 100px; /* Optional padding to maintain space on the right */
+  }
+  .footer-left-content div p{
+    margin: 0;
+    margin-top: 10px;
+  }
+  
+  
+.footer-left-div h1{
+    all: unset;
+    font-family: "Source Serif Pro";
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 52px;
+    font-style: normal;
+    text-align: left;
+    color: #ffffff;
+}
+.footer-cent-div{
+    width:26% ;
+    height: 242px;
+    text-align: center;
+}
+.footer-cent-div h4{
+    all: unset;
+    font-family: "Source Serif Pro";
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 30px;
+    font-style: normal;
+    color: #1b2d55;
+}
+.footer-cent-div ul{
+    list-style-type: none;    
+}
+.footer-cent-div ul li{
+    font-family: "Proxima Nova";
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    font-style: normal;
+    color: #1b2d55;
+}
+
+
+.footer-right-div{
+    width: 32%;
+    background: #7cd27f;
+    height: 242px;
+}

@@ -1,0 +1,87 @@
+/* Navbar.css */
+/* Styles for navbar elements */
+
+/* Common styles */
+header{
+  max-width: 1200px;
+  margin: auto;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  font-family: "Source Serif Pro";
+}
+
+.navbar-logo {
+  text-decoration: none;
+  display: flex; /* Ensure the h1 elements are side by side */
+}
+
+.first-heading,
+.second-heading {
+  margin: 0; /* Add spacing between h1 elements */
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 52px;
+  font-style: normal;
+}
+
+.first-heading {
+  color: #1B2D55; /* Color for the first h1 */
+}
+
+.second-heading {
+  color: #7CBAD2; /* Color for the second h1 */
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-link {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #333; /* Change color as needed */
+}
+
+.navbar-button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background-color: #ccc; /* Change color as needed */
+  border: none;
+  border-radius: 5px;
+  color: #fff; /* Change color as needed */
+}
+
+/* Media query for smaller screens (phones) */
+@media screen and (max-width: 768px) {
+  .navbar {
+      flex-direction: row;
+    text-align: center;
+  }
+
+  .navbar-logo {
+    margin-bottom: 1rem;
+  }
+  .first-heading,
+  .second-heading {
+    margin: 0; /* Add spacing between h1 elements */
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 52px;
+    font-style: normal;
+  }
+  .navbar-links {
+    flex-direction: column;
+  }
+
+  .navbar-link {
+    margin: 0.5rem 0;
+  }
+}

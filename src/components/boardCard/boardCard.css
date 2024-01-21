@@ -1,0 +1,93 @@
+.main_container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+}
+.cardbg{
+    border-radius: 78px;
+    padding: 20px 26px 20px 29px;
+    background: #f3f3f3;
+}
+.card.help-style{
+    border-radius: 42px;
+    padding-top: 20px;
+    filter: drop-shadow(0px 3px 3px rgba(0,0,0,0.16 ));
+    height: 100%;
+    background: #7CD27F;
+    display: flex;
+    flex-direction: column;
+}
+.card.host-style{
+    border-radius: 42px;
+    padding-top: 20px;
+    filter: drop-shadow(0px 3px 3px rgba(0,0,0,0.16 ));
+    height: 100%;
+    background: #7CBAD2;
+    display: flex;
+    flex-direction: column;
+}
+.cardbg h1
+{
+    margin-left: 40px;
+    font-family: "Source Serif Pro";
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 60px;
+    font-style: normal;
+    text-align: left;
+    color: #051231;
+    text-align: center;
+}
+.cardbg h2
+{
+    margin: 0;
+    
+    font-family: "Source Serif Pro";
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 50px;
+    margin-top:10px ;
+    font-style: normal;
+    text-align: left;
+    color: #ffffff;
+    text-align: center;
+
+}
+.cardbg p
+{
+    margin: 0;
+    margin-top: 31px;
+    font-family: "Proxima Nova";
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 27px;
+    font-style: normal;
+    text-align: left;
+    color: #1b2d55;
+
+    text-align: center;
+
+}
+.cardbg a
+{
+    all: unset;
+    cursor: pointer;
+    padding: 22px 47px;
+    font-family: "Montserrat";
+    font-size: 30px;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 29px;
+    background: #051231;
+    text-decoration: none;
+    margin: 0 auto;    
+    margin-top: 40px;
+    margin-bottom: 41px;
+}
