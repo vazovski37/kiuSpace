@@ -9,7 +9,7 @@ import NotFound from './pages/NotFound';
 import Navbar from './components/Navbar';
 import Footer from './components/footer/Footer';
 import ImageUpload from './components/Product/ImageUpload.jsx';
-import './app.css';
+import './App.css';
 import AddProduct from './components/Product/AddProduct.jsx'
 import EditProduct from './components/Product/EditProduct.jsx';
 import ProductDetails from './components/productDetails/ProductDetails.jsx';
