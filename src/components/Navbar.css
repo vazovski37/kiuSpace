@@ -1,4 +1,4 @@
-/* Navbar.css */
+Navbar.css
 /* Styles for navbar elements */
 
 /* Common styles */
@@ -38,11 +38,49 @@ header{
 
 .navbar-links {
   display: flex;
+  flex-direction: row;
   align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
 }
+.navbar-links li a{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #7CBAD2;
+  border-radius: 13px;
+  padding: 9px 20px 9px 9px;
+  color: #fff;
+  gap: 16px;
+  font-size: 18px;
+  text-decoration: none;
+}
+.person{
+  background-color: white !important;
+  width: 40px !important;
+  height: 40px !important;
+}
+.person img{
+  width: 21.3px !important;
+  height: 23.9px !important;
+}
+.person :hover{
+  background: #f0f3f7;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+}
+.navbar-links li a img{
+width: 17.1px;
+height: 19.3px;
+}
+
+.stack-g{
+  background-color: #7CD27F !important;
+}
+
+
 
 .navbar-link {
   margin: 0 1rem;
@@ -78,7 +116,7 @@ header{
     font-style: normal;
   }
   .navbar-links {
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .navbar-link {

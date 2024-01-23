@@ -19,7 +19,7 @@ export default function KiuHelp() {
   }
 
   return (
-    <div>KiuHelp
+    <div>
       <KiuHHeader header_data={header_data} />
       <HelpCard />
       <KiuHFooter footer_data = {footer_data} />

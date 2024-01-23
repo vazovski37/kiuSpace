@@ -1,0 +1,265 @@
+/* Your main CSS file or component CSS */
+@import '../fonts/fonts.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+header{
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: 177px;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.navbar-links{
+    position: absolute;
+    float: right;
+    right: 0;
+    top: 10px;
+    width: 30%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar-logo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-decoration: none;
+}
+.first-heading,
+.second-heading {
+  font-family: "Montserrat";
+  margin: 0; /* Add spacing between h1 elements */
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 52px;
+}
+.first-heading {
+  color: #1B2D55;
+  font-family: "Montserrat";
+}
+.second-heading {
+  color: #7CBAD2;
+  font-family: "Montserrat";
+}
+.u1{
+    margin-left: 14px;
+    margin-top: 7px;
+}
+.add{
+    border-radius: 9px;
+    padding: 9px 14px 9px 9px;
+    cursor: pointer;
+}
+.add-b{
+    background: #afd6e4;
+}
+.add-g{
+    background: #AAE6AC;
+}
+.add-b:hover{
+    background: #7cbad2
+}
+.add-g:hover{
+    background: #7CD27F
+}
+.add a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+.add a p{
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    text-align: left;
+    color: #404654;
+}
+.add img{
+    width: 16px;
+    height: 16px;
+}
+.profile:hover{
+    background-color: #f0f3f7;
+    cursor: pointer;
+}
+.profile{
+    cursor: pointer;
+    border-radius: 9px;    
+    background: #fff;
+    height: 36px;
+    width: 59px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile a img{
+    width: 21.3px;
+    height: 23.9px;
+}
+.stack a{
+    
+    margin-right: 24px;
+    background-color: #fff;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-color: #d2d6df;
+    border-width: 1.5px;
+    border-style: solid;
+}
+.stack img{
+    width: 29.5px;
+    height: 25.2px; 
+}
+.stack-g a{
+    
+    margin-right: 24px;
+    
+    background-color: #7CD27F;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.stack-g img{
+    width: 29.5px;
+    height: 25.2px; 
+}
+.stack-b a{
+    
+    margin-right: 24px;
+    
+    top: 8px;
+    background-color: #7CBAD2;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.stack-b img{
+    width: 29.5px;
+    height: 25.2px; 
+}
+.b1{
+    position: absolute;
+    width: 403px;
+    height: 149px;
+    border-radius: 15px;
+    background: #ffffff;
+    right: 24px;
+    top: 65px;
+    z-index: 9;
+}
+.sb{
+    filter: drop-shadow(2px 5px 10px #AFD6E4);
+}
+.sg{
+    filter: drop-shadow(2px 5px 10px #7cd27f);
+}
+.b1-content a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+}
+.d-f-r{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    gap: 60px;
+    margin-top: 10px;
+}
+.d-f-r a{
+    width: 142px;
+    height: 57px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    border-radius: 12px;
+}
+.f-h{
+    font-family: "Montserrat";
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 52px;
+    font-style: normal;
+    text-align: left;
+    color: #1B2D55;
+}
+.s-h-help{
+    font-family: "Montserrat";
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 52px;
+    font-style: normal;
+    text-align: left;
+    color: #7CD27F;
+}
+.s-h-host{
+    font-family: "Montserrat";
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 52px;
+    font-style: normal;
+    text-align: left;
+    color: #7cbad2;
+}
+.current-page{
+
+    
+    
+    background: #eff1f5
+}
+.login-btn{
+    width: 117px;
+    height: 45px;
+    border-radius: 13px;
+    background: #7cbad2
+}
+.login-btn a{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap:16px;
+    text-decoration: none;
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    color: #ffffff;
+}
+.login-btn a img{
+    width: 17.1px;
+    height: 19.3px;
+}
+
+
+
+
