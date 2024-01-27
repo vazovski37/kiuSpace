@@ -39,7 +39,6 @@
   border-radius: 29px;
 }
 .ctn{
-  width: 50%;
   background: #fff;
   border:  2px solid #707070;
   border-radius: 17px;
@@ -63,9 +62,11 @@
   font-style: normal;
   text-align: left;
   color: #cfcfcf;
+  margin: 0;
 }
 .wrapper form{
-  height: 167px;
+  padding-top: 17px;
+  padding-bottom: 31px;
   display: flex;
   cursor: pointer;
   margin: 10px 0px 30px 0px;
@@ -80,16 +81,19 @@
 
 background: #f7f7f7
 }
-form :where(i, p){
+/* form :where(i, p){
   color: #6990F2;
 }
 form i{
   font-size: 50px;
 }
 form p{
+  display: flex;
+  align-items: center;
+  gap:8px;
   margin-top: 15px;
   font-size: 16px;
-}
+} */
 
 section .row{
   margin-bottom: 10px;
@@ -175,6 +179,115 @@ form label{
   text-align: left;
   color: #24396e;
 }
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  grid-template-rows: auto auto; /* Auto-sized rows */
+
+  /* Optional: Adjust gap between grid items */
+  gap: 10px;
+}
+form > :nth-child(3) {
+  grid-column: span 2; /* Span two columns */
+}
+
+.form-t-inputs{
+  height: 61px;
+  border-color: #707070;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 25px;
+  
+  background: #ffffff
+}
+
+.radio-option{
+  font-family: "Montserrat";
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 27px;
+  font-style: normal;
+  text-align: left;
+  color: #aeb0b5;
+}
+
+/* CustomRadioButtons.css */
+.radio-buttons-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.radio-buttons-group label{
+  font-family: "Montserrat";
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 27px;
+  font-style: normal;
+  text-align: left;
+  color: #aeb0b5;
+  max-width: 215px;
+}
+
+.radio-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-bottom: 5px;
+  padding: 15px;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+
+  border-color: #707070;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 21px;
+  
+  
+  background: #ffffff
+}
+
+.radio-button:hover {
+  background-color: #f0f0f0;
+}
+
+.radio-button .radio-dot {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 2px solid #707070;
+
+  position: relative;
+}
+
+.radio-button.selected .radio-dot {
+  border-color: #7CD27F;
+
+}
+
+.radio-button .radio-dot::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #707070;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.radio-button.selected .radio-dot::after {
+  transform: translate(-50%, -50%) scale(1);
+  background-color: #7CD27F;
+}
+
+
+
+
 .linput{
   border-color: #707070 !important ;
   border-width: 1px !important;
@@ -199,6 +312,16 @@ form label{
   background: #ffffff !important
 }
 
+.Upload_Icon_Logo{
+  width: 205px;
+  height: 205px;
+}
+.Upload_Icon_Logo_Small{
+  width: 40px;
+  height: 40px;
+}
+
+
 
 @media screen and (max-width: 768px) {
   .addproduct_main_ctn{
@@ -219,4 +342,75 @@ form label{
     padding: 0;
     }
   /* You can add more specific styles here for smaller screens if needed */
+}
+
+
+
+/* Custom Dropdown */
+.custom-dropdown {
+  margin-bottom: 20px;
+}
+
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.selected-option {
+  padding: 8px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.options-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  z-index: 1;
+}
+.drop-down{
+  display: block;
+}
+.drop-up{
+  display: none;
+}
+.option {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #f0f0f0;
+}
+
+.selected {
+  background-color: #e0e0e0;
+}
+
+/* Radio Buttons */
+.radio-buttons-group {
+  display: flex;
+  flex-direction: row;
+}
+
+.radio-button {
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.radio-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  background-color: #fff;
+  margin-right: 4px;
+}
+
+.selected .radio-dot {
+  background-color: #333;
 }

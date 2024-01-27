@@ -10,6 +10,7 @@ export default function AddProduct() {
     category: '',
     price: '',
     description: '',
+    phoneNumber: '',
   });
   const [filesToUpload, setFilesToUpload] = useState([]);
   const [authToken, setAuthToken] = useState(localStorage.getItem('authToken'));
@@ -156,6 +157,17 @@ export default function AddProduct() {
                 type="number"
                 name="price"
                 value={productData.price}
+                onChange={handleInputChange}
+              />
+            </label>
+            <br />
+            <label>
+              Phone Number:
+              <input
+                className='linput'
+                type="number"
+                name="phoneNumber"
+                value={productData.phoneNumber}
                 onChange={handleInputChange}
               />
             </label>

@@ -17,3 +17,22 @@
     border-style: solid;
     margin-bottom: 42px;
 }
+
+
+@media screen and (max-width: 768px) {
+.home-header-underline{
+    width: 100%;
+    margin-bottom: 0px;
+}
+.home-header-text{
+    font-family: "Source Serif Pro";
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 76px;
+    font-style: normal;
+    text-align: center;
+    color: #1b2d55;
+    margin-top: 63px;
+    margin-bottom: 0;
+}
+}

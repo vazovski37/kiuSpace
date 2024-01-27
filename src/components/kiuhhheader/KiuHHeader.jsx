@@ -15,7 +15,7 @@ export default function KiuHHeader({ header_data }) {
   const hostClass = header_data.for === 'host' ? 'host-style' : '';
   const helpClass = header_data.for !== 'host' ? 'help-style' : '';
 
-  const createEmptyProduct = () => {
+  const createProduct = () => {
     
     if (header_data.for === 'help') {
       createEmptyHelpProduct();
@@ -24,23 +24,26 @@ export default function KiuHHeader({ header_data }) {
     }
   };
 
-  const createEmptyHelpProduct = async () => {
-    try {
-      const response = await axios.post(`${API_BASE_URL}/user/products/empty-help`, {}, {
-        headers: {
-          Authorization: `Bearer ${authToken}`,
-        },
-      });
-      setProductId(response.data.product.id);
-      window.location.href = `${header_data.href}/${response.data.product.id}`;
-    } catch (error) {
-      console.error('Error creating empty help product:', error);
-      // Handle errors or display error messages to the user
-    }
-  };
+  // const createEmptyHelpProduct = async () => {
+  //   try {
+  //     const response = await axios.post(`${API_BASE_URL}/user/products/empty-help`, {}, {
+  //       headers: {
+  //         Authorization: `Bearer ${authToken}`,
+  //       },
+  //     });
+  //     setProductId(response.data.product.id);
+  //     window.location.href = `${header_data.href}/${response.data.product.id}`;
+  //   } catch (error) {
+  //     console.error('Error creating empty help product:', error);
+  //     // Handle errors or display error messages to the user
+  //   }
+  // };
 
   const createEmptyHostProduct = () =>{
     window.location.href = "/addProduct"
+  }
+  const createEmptyHelpProduct = () =>{
+    window.location.href = "/addPost"
   }
 
   const createEmptyHostProduct1 = async () => {
@@ -89,7 +92,7 @@ export default function KiuHHeader({ header_data }) {
         <p className="description">
           Curabitur augue sem, mollis vel purus sit amet, elementum molestie urna. Vivamus felis orci.
         </p>
-        <button className="add-product-button" onClick={()=>{createEmptyHostProduct()}} >ADD UR PRODUCT</button>
+        <button className="add-product-button" onClick={()=>{createProduct()}} >ADD UR PRODUCT</button>
       </div>
       <div className="illustration-container">
       <img className={`image ${hostClass} ${helpClass}`} src={imageSrc} alt="Header Image" />

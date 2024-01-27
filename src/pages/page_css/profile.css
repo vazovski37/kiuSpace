@@ -45,13 +45,13 @@
     font-weight: bold;
   }
   
-  input[type='text'],
+  /* input[type='text'],
   input[type='password'] {
     width: 100%;
     padding: 8px;
     border-radius: 3px;
     border: 1px solid #ccc;
-  }
+  } */
   
   .btn {
     padding: 8px 16px;

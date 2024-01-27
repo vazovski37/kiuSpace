@@ -3,34 +3,41 @@
 /* Common styles for search button and search bar input */
 .searchButton {
     all: unset;
-    background-color: #7CBAD2;
-    padding: 9px;
-    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 9px;
+    padding-left:12px;
+    width: 15px;
+    height: 15px;
+    border-left: 0.4px solid #d2d6df;
     cursor: pointer;
   }
   
   .searchBar {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    margin-bottom: 20px; /* Add margin for separation */
+    position: relative;
+    width: 354px;
+    height: 34px;
+    margin-left: 30px;
   }
   
   .searchBar input {
-    width: 300px; /* Adjusted for responsiveness */
+    width: 354px;
+    height: 34px; /* Adjusted for responsiveness */
     border: none;
-    border-bottom: 2px solid #707070;
-    color: #1B2D55;
-    border-radius: 0;
+    border-radius: 50px;
+    border-color: #d2d6df;
+    border-width: 1.2000000476837158px;
+    border-style: solid;
     padding-bottom: 0px;
+    padding-left: 12px;
     margin-bottom: 0px;
   }
   
   .searchBar input:focus {
     outline: none;
-    border-bottom: 2px solid #707070;
+    border-color: #707070;
     color: #1B2D55;
-    border-radius: 0;
   }
   
   /* Additional styles for section buttons */
@@ -41,6 +48,7 @@
     background-color: #bcbcbc;
     position: absolute;
     z-index: 999;
+    margin-top: 20px;
   }
   
   .sectionButtonsContainer {
@@ -58,7 +66,12 @@
   .sectionButtonsContainer button.selected {
     border-bottom: 2px solid #7CBAD2; /* Add bottom border to the selected button */
   }
-
+  .search-mobile{
+    display: none;
+  }
+  .search-desktop{
+    display: block;
+  }
   /* Media query for smaller screens (phones) */
 /* Search.css */
 
@@ -66,22 +79,15 @@
 /* ... your existing styles */
 
 /* Media query for smaller screens (phones) */
-@media screen and (max-width: 768px) {
-    .searchButton {
-      /* Hide search input by default on smaller screens */
-      display: block;
+
+ 
+  @media screen and (max-width: 1100px) {
+    .searchBar{
+      width: 280px;
     }
-  
-    .searchBar {
-      /* Hide search bar and show only the search button */
-      display: flex;
-      justify-content: center;
+    .searchBar input{
+      width: 280px;
     }
-  
-    .searchBar input {
-      display: none; /* Hide input on smaller screens */
-    }
-  
     .searchR {
       /* Show search results on full screen when the input or search button is clicked */
       position: fixed;
@@ -109,4 +115,57 @@
     }
   }
   
-  
+  @media screen and (max-width: 840px) {
+    .searchBar{
+      width: 200px;
+    }
+    .searchBar input{
+      width: 200px;
+    }
+  }
+
+  /* phone */
+
+  @media screen and (max-width: 768px) { 
+    .search-mobile{
+      display: block;
+      width: 100%;
+    }
+
+    .search-desktop{
+      display: none;
+    }
+    .searchButton{
+      all: unset;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      margin: 9px;
+      padding-left: 12px;
+      width: 15px;
+      height: 15px;
+      border-left: 0.4px solid #d2d6df;
+      cursor: pointer;
+    }
+    .searchBar {
+      left: 0; 
+      width:100%;
+      height: 34px;
+      margin-left: 0px;
+    }
+    
+    .searchBar input {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 34px; 
+      border: none;
+      border-radius: 50px;
+      border-color: #d2d6df;
+      border-width: 1.2000000476837158px;
+      border-style: solid;
+      padding-bottom: 0px;
+      padding-left: 12px;
+      margin-bottom: 0px;
+    }
+  }

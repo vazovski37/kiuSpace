@@ -13,6 +13,7 @@ import './App.css';
 import AddProduct from './components/Product/AddProduct.jsx'
 import EditProduct from './components/Product/EditProduct.jsx';
 import ProductDetails from './components/productDetails/ProductDetails.jsx';
+import DynamicForm from './components/Product/DynamicForm.jsx';
 
 function App() {
   const location = useLocation();
@@ -22,6 +23,7 @@ function App() {
 
   // Function to check if current path is in the excludedPaths array
   const isExcludedPath = () => excludedPaths.includes(location.pathname);
+
 
   return (
     <>
@@ -36,7 +38,8 @@ function App() {
         <Route path="*" element={<NotFound />} />
         <Route path="/not-found" element={<NotFound />} />        
         <Route path='/dopa' element={<ImageUpload />} />
-        <Route path='/addProduct' element={<AddProduct />} />
+        <Route path="/addProduct" element={ <DynamicForm/> } />
+        <Route path="/addPost" element={ <DynamicForm/> } />
         <Route path='/editProduct/:productId' element={<EditProduct />} />
         <Route path="/products/:productId" element={<ProductDetails />} />
       </Routes>
