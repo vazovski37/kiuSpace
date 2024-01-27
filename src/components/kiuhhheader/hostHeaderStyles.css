@@ -104,16 +104,13 @@ height: 168px;
    */
 
    .kiu-ecosystem {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5vw; /* Adjust padding as a percentage of the viewport width */
-    background: linear-gradient(to right, #a1c4fd, #c2e9fb);
-    color: #333;
-    max-width: 100vw; /* Ensure the component does not exceed the width of the viewport */
-    overflow: hidden; /* Prevent any child elements from causing horizontal scroll */
+    top: 0px;
+    position: relative;
+    width: 100%;
   }
-  
+  .kiu-ecosystem img{
+    width:  100% !important;
+  }
   .content-container {
     max-width: 40%; /* Adjust content width as a percentage of the parent container */
   }
@@ -127,11 +124,14 @@ height: 168px;
   }
   
   .add-product-button {
+    position: absolute;
+    bottom: 15%;
+    left: 25%;
     padding: 1vw 2vw; /* Use viewport units for padding to keep it proportional */
     font-size: 1vw;
-    background-color: #ffffff;
+    background-color: #7CBAD2;
+    border-radius: 50px;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
@@ -143,17 +143,17 @@ height: 168px;
   /* Responsive design for mobile devices */
   @media (max-width: 768px) {
     .kiu-ecosystem {
-      flex-direction: column;
-      padding: 10% 5%; /* Increase padding proportionally */
+      top: 80px;
+       /* Increase padding proportionally */
     }
     
-    .content-container,
+    /* .content-container,
     .illustration-container {
-      max-width: 100%; /* Allow content to take full width on small screens */
+      max-width: 100%; Allow content to take full width on small screens
     }
     
     .header {
-      font-size: 4vw; /* Increase font size for readability on small screens */
+      font-size: 4vw; Increase font size for readability on small screens
     }
     
     .description {
@@ -163,6 +163,6 @@ height: 168px;
     .add-product-button {
       padding: 3vw 6vw;
       font-size: 3.5vw;
-    }
+    } */
   }
   

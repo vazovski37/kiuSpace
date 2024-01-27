@@ -7,6 +7,10 @@ import helpImg from '../../images/header_illustration_help.png';
 import './hostHeaderStyles.css';
 import './helpHeaderStyles.css';
 
+import hostLayer from '../../images/hostLayer.png'
+import helpLayer from '../../images/helpLayer.png'
+
+
 export default function KiuHHeader({ header_data }) {
   const [productId, setProductId] = useState(null);
 
@@ -65,7 +69,7 @@ export default function KiuHHeader({ header_data }) {
       console.error('Error creating empty product:', error);
       // Handle errors or display error messages to the user
     }
-    console.log('sdca')
+    // console.log('sdca')
 
   };
 
@@ -86,19 +90,20 @@ export default function KiuHHeader({ header_data }) {
         <img className={`image ${hostClass} ${helpClass}`} src={imageSrc} alt="Header Image" />
         <div className={`bottom-box ${hostClass} ${helpClass}`}></div>
       </div> */}
-    <div className="kiu-ecosystem">
-      <div className="content-container">
-        <h1 className="header">BEST PLACE TO ENGAGE IN KIU ECOSYSTEM</h1>
-        <p className="description">
-          Curabitur augue sem, mollis vel purus sit amet, elementum molestie urna. Vivamus felis orci.
-        </p>
-        <button className="add-product-button" onClick={()=>{createProduct()}} >ADD UR PRODUCT</button>
-      </div>
-      <div className="illustration-container">
-      <img className={`image ${hostClass} ${helpClass}`} src={imageSrc} alt="Header Image" />
-        {/* Illustrations and other visual elements would go here */}
-      </div>
-    </div>
+
+      { header_data.for === 'host' ?
+        (
+          <div className="kiu-ecosystem">
+              <img src={hostLayer} alt="" />
+              <button className="add-product-button" onClick={()=>{createProduct()}} >ADD UR PRODUCT</button>
+          </div>
+        ) : (
+          <div className="kiu-ecosystem">
+              <img src={helpLayer} alt="" />
+              <button className="add-product-button" style={{backgroundColor : "#7CD27F"}} onClick={()=>{createProduct()}} >ADD UR PRODUCT</button>
+          </div>
+        )
+      }
 
     </>
   );
