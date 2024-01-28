@@ -374,5 +374,45 @@ nav{
         text-align: center;
         color: #1b2d55;
     }
+    .toggledMenu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0px;
+        left: 0px;
+        background-color: #FFFFFF;
+    }
+
+    .toggleMenuExitImg{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 14.4px;
+        height: 14.4px;
+    }
+    .toggleMenuExitImg img{
+        width: 14.4px;
+        height: 14.4px;
+    }
+    .toggledMenu p{
+        font-family: "Montserrat";
+        font-size: 9px;
+        font-weight: 500;
+        font-style: normal;
+        color: #d2d6df;
+        margin-left: 12px;
+        margin-top: 21px;
+    }
+    .toggledMenu a{
+        margin-left: 12px;
+        font-family: "Montserrat";
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 25px;
+        font-style: normal;
+        text-align: center;
+        color: #404654;
+        text-decoration: none;
+    }
     
   }

@@ -10,6 +10,7 @@ import stack_host_unclicked from '../images/stack-host-unclicked.png';
 import loginbtn from '../images/loginbtn.png';
 import burgerMenu from '../images/burgerMenu.png';
 import BottomBar from './BottomBar.jsx';
+import exitImg from '../images/exit.png'
 
 export default function Navbar() {
   const [isStackClicked, setIsStackClicked] = useState(false);
@@ -156,7 +157,42 @@ export default function Navbar() {
             <img src={burgerMenu} onClick={() => setToggleMenu(!toggleMenu)} />
             {toggleMenu ? (
               <div className='toggledMenu'>
-                <div onClick={() => setToggleMenu(!toggleMenu)}>X</div>
+                <div className='toggleMenuExitImg' onClick={() => setToggleMenu(!toggleMenu)}>
+                  <img src={exitImg} alt="" />
+                </div>
+
+                <div>
+                  <p>menu</p>
+                  <ul>
+                  <li>
+                    <Link to='/' >
+                      Help
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to='/' >
+                      Contact
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to='/' >
+                    Safety landing
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to='/' >
+                    Terms and Conditions
+                    </Link>
+                  </li>
+                  </ul>
+                </div>
+                <br />
+                <hr />
+                <div>
+                  <Link to='https://www.facebook.com/'>Facebook</Link>
+                  <Link to='https://www.instagram.com/'>Instagram</Link>
+                </div>            
+
               </div>
             ) : null}
           </div>
